@@ -1,5 +1,5 @@
 {% set name = "toyplot" %}
-{% set version = "1.0.3" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7b7b2bc5784fd75e5c695300bffc80d568c83bebef543bb54e6e6c2229912edd
+  sha256: abdecb0c264e3f695cf560eea16076eee8ef79c900f69edebac7fb0b27fc0c0b
 
 build:
   number: 0
