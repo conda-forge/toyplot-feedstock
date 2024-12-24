@@ -6,29 +6,31 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7b7b2bc5784fd75e5c695300bffc80d568c83bebef543bb54e6e6c2229912edd
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - arrow
     - custom-inherit
     - multipledispatch
     - numpy >=1.8.0
     - pypng
-    - python >=3.6
+    - python >={{ python_min }}
     - reportlab
     - six
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - toyplot
     - toyplot.reportlab
