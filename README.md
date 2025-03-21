@@ -1,11 +1,11 @@
-About toyplot
-=============
+About toyplot-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/toyplot-feedstock/blob/main/LICENSE.txt)
 
 Home: http://toyplot.readthedocs.org
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/toyplot-feedstock/blob/main/LICENSE.txt)
 
 Summary: A modern plotting toolkit supporting electronic publishing and reproducibility.
 
@@ -97,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@dpryan79](https://github.com/dpryan79/)
+* [@eaton-lab](https://github.com/eaton-lab/)
 
