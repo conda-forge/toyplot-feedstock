@@ -15,10 +15,6 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python {{ python_min }}
-    - pip
-    - flit-core
   host:
     - python {{ python_min }}
     - pip
