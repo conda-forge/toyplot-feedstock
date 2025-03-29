@@ -1,13 +1,13 @@
 {% set name = "toyplot" %}
-{% set version = "1.0.3" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7b7b2bc5784fd75e5c695300bffc80d568c83bebef543bb54e6e6c2229912edd
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: abdecb0c264e3f695cf560eea16076eee8ef79c900f69edebac7fb0b27fc0c0b
 
 build:
   number: 0
@@ -16,19 +16,22 @@ build:
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
-    - python >=3.6
+    - flit-core
   run:
+    - python >={{ python_min }}
     - arrow
     - custom-inherit
     - multipledispatch
     - numpy >=1.8.0
     - pypng
-    - python >=3.6
     - reportlab
     - six
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - toyplot
     - toyplot.reportlab
@@ -45,3 +48,4 @@ extra:
   recipe-maintainers:
     - eaton-lab
     - dpryan79
+    - eaton-lab
